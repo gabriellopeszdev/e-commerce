@@ -36,7 +36,7 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
       ) : (
         <div>
           <h2 className="text-2xl font-bold mb-4">Carrinho de Compras</h2>
-          <ul className="space-y-4">
+          <ul className="space-y-4 max-h-64 overflow-y-auto">
             {cartItems.map((item, index) => (
               <li key={index} className="flex items-center justify-between border-b pb-2">
                 <span className="font-semibold">{item.name}</span>
