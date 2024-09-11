@@ -4,10 +4,10 @@ import ProductCard from "../components/Product";
 import Cart from "../components/Cart";
 
 const products = [
-  { id: 1, name: 'Casual T-Shirt', price: 29.99, image: '/images/tshirt.jpg' },
-  { id: 2, name: 'Denim Jeans', price: 49.99, image: '/images/jeans.jpg' },
-  { id: 3, name: 'White Sneakers', price: 79.99, image: '/images/sneakers.jpg' },
-  { id: 4, name: 'Leather Bag', price: 99.99, image: '/images/bag.jpg' },
+  { id: 1, name: 'Casual T-Shirt', price: 29.99, image: '/images/casual-t-shirts.jpg' },
+  { id: 2, name: 'Midi Skirt', price: 49.99, image: '/images/midi-skirt.avif' },
+  { id: 3, name: 'White Sneakers', price: 79.99, image: '/images/white-sneaker.webp' },
+  { id: 4, name: 'Leather Bag', price: 99.99, image: '/images/Luppi.webp' },
 ];
 
 const Home: React.FC = () => {
@@ -18,11 +18,11 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="bg-darkBlue min-h-screen text-white">
+    <div className="bg-gray-100 min-h-screen text-gray-900">
       <Header cartCount={cartItems.length} />
       <div className="container mx-auto py-8 px-6">
-        <h1 className="text-4xl font-extrabold text-center mb-12">Moda Casual</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <h1 className="text-5xl font-extrabold text-center mb-12">Moda Casual</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.map((product) => (
             <ProductCard
               key={product.id}
@@ -34,8 +34,7 @@ const Home: React.FC = () => {
           ))}
         </div>
         <div className="mt-10">
-          <h2 className="text-2xl font-bold mb-4">Carrinho de Compras</h2>
-          <Cart cartItems={cartItems} />
+          <Cart cartItems={cartItems} setCartItems={setCartItems} />
         </div>
       </div>
     </div>

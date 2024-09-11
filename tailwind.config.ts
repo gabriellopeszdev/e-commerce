@@ -9,9 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        charcoal: '#333333',
-        graphite: '#4F4F4F',
-        darkBlue: '#2C3E50',
+        'darkBlue': '#003366',
+        'charcoal': '#333333',
+        'graphite': '#555555',
+        'blue': {
+          600: '#1E3A8A',
+          700: '#1E40AF',
+        },
+        'red': {
+          500: '#EF4444',
+          600: '#DC2626',
+        },
+      },
+      fontFamily: {
+        sans: ['Roboto', 'Arial', 'sans-serif'],
       },
     },
   },
