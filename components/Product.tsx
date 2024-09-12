@@ -17,7 +17,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, price, image, addToCart
 
   return (
     <div className="bg-white text-gray-900 shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 relative">
-      <img src={image} alt={name} className="w-full h-64 object-cover transition-opacity duration-300 hover:opacity-80" />
+      
+      <svg>
+      <image href={image} className="w-full h-64 object-cover transition-opacity duration-300 hover:opacity-80" />
+      
+      </svg>
+
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 hover:opacity-50 transition-opacity duration-300"></div>
       <div className="p-4 relative z-10">
         <h3 className="text-lg font-semibold mb-2">{name}</h3>
