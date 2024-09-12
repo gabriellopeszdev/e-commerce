@@ -19,6 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, price, image, addToCart
     <div className="bg-white text-gray-900 shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 relative">
       
       <svg>
+        
       <image href={image} className="w-full h-64 object-cover transition-opacity duration-300 hover:opacity-80" />
       
       </svg>
