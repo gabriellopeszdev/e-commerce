@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaShoppingCart, FaUserCircle, FaSearch } from "react-icons/fa";
+import Link from "next/link";
 
 interface HeaderProps {
   cartCount: number;
@@ -13,15 +14,23 @@ const Header: React.FC<HeaderProps> = ({ cartCount }) => {
       <div className="container mx-auto flex items-center justify-between relative">
         
         <nav className="flex space-x-8">
-          <a href="/" className="hover:text-gray-300 transition duration-300 transform hover:scale-105">Home</a>
-          <a href="/" className="hover:text-gray-300 transition duration-300 transform hover:scale-105">Sobre nós</a>
-          <a href="/" className="hover:text-gray-300 transition duration-300 transform hover:scale-105">Contato</a>
+          <Link href="/">
+            <a className="hover:text-gray-300 transition duration-300 transform hover:scale-105">Home</a>
+          </Link>
+          <Link href="/">
+            <a className="hover:text-gray-300 transition duration-300 transform hover:scale-105">Sobre nós</a>
+          </Link>
+          <Link href="/">
+            <a className="hover:text-gray-300 transition duration-300 transform hover:scale-105">Contato</a>
+          </Link>
         </nav>
 
         <div className="absolute inset-x-0 flex justify-center">
-          <a href="/" className="text-3xl font-bold hover:text-gray-300 transition duration-300 shadow-lg">
-            Urban Style
-          </a>
+          <Link href="/">
+            <a className="text-3xl font-bold hover:text-gray-300 transition duration-300 shadow-lg">
+              Urban Style
+            </a>
+          </Link>
         </div>
 
         <div className="flex items-center space-x-4">
@@ -43,17 +52,25 @@ const Header: React.FC<HeaderProps> = ({ cartCount }) => {
             </button>
             {dropdownOpen && (
               <div className="absolute right-0 mt-2 bg-white text-gray-800 rounded-md shadow-lg w-48">
-                <a href="/profile" className="block px-4 py-2 hover:bg-gray-100 transition duration-300">Perfil</a>
-                <a href="/orders" className="block px-4 py-2 hover:bg-gray-100 transition duration-300">Meus Pedidos</a>
-                <a href="/logout" className="block px-4 py-2 hover:bg-gray-100 transition duration-300">Sair</a>
+                <Link href="/profile">
+                  <a className="block px-4 py-2 hover:bg-gray-100 transition duration-300">Perfil</a>
+                </Link>
+                <Link href="/orders">
+                  <a className="block px-4 py-2 hover:bg-gray-100 transition duration-300">Meus Pedidos</a>
+                </Link>
+                <Link href="/logout">
+                  <a className="block px-4 py-2 hover:bg-gray-100 transition duration-300">Sair</a>
+                </Link>
               </div>
             )}
           </div>
 
           <div className="relative">
-            <a href="/cart" className="text-white hover:text-gray-300 transition duration-300 transform hover:scale-110">
-              <FaShoppingCart size={28} />
-            </a>
+            <Link href="/cart">
+              <a className="text-white hover:text-gray-300 transition duration-300 transform hover:scale-110">
+                <FaShoppingCart size={28} />
+              </a>
+            </Link>
             {cartCount > 0 && (
               <span className="absolute -top-2 -right-3 bg-red-500 text-white rounded-full px-2 py-1 text-xs">
                 {cartCount}
