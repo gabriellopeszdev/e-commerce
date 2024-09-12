@@ -56,15 +56,15 @@ const Header: React.FC<HeaderProps> = ({ cartCount }) => {
             {dropdownOpen && (
               <div className="absolute right-0 mt-2 bg-white text-gray-800 rounded-md shadow-lg w-48">
 
-              <link href='/profile'>
+              <link href='/'>
                 <a className="block px-4 py-2 hover:bg-gray-100 transition duration-300">Perfil</a>
               </link>
 
-              <link href='/orders'>
+              <link href='/'>
                 <a className="block px-4 py-2 hover:bg-gray-100 transition duration-300">Meus Pedidos</a>
               </link>
 
-              <link href='/logout'>
+              <link href='/'>
                 <a className="block px-4 py-2 hover:bg-gray-100 transition duration-300">Sair</a>
               </link>
 
