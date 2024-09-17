@@ -14,22 +14,20 @@ const Header: React.FC<HeaderProps> = ({ cartCount }) => {
       <div className="container mx-auto flex items-center justify-between relative">
         
         <nav className="flex space-x-8">
-          <Link href="/">
-            <a className="hover:text-gray-300 transition duration-300 transform hover:scale-105">Home</a>
+          <Link href="/" className="hover:text-gray-300 transition duration-300 transform hover:scale-105">
+            Home
           </Link>
-          <Link href="/">
-            <a className="hover:text-gray-300 transition duration-300 transform hover:scale-105">Sobre nós</a>
+          <Link href="/about" className="hover:text-gray-300 transition duration-300 transform hover:scale-105">
+            Sobre nós
           </Link>
-          <Link href="/">
-            <a className="hover:text-gray-300 transition duration-300 transform hover:scale-105">Contato</a>
+          <Link href="/contact" className="hover:text-gray-300 transition duration-300 transform hover:scale-105">
+            Contato
           </Link>
         </nav>
 
         <div className="absolute inset-x-0 flex justify-center">
-          <Link href="/">
-            <a className="text-3xl font-bold hover:text-gray-300 transition duration-300 shadow-lg">
-              Urban Style
-            </a>
+          <Link href="/" className="text-3xl font-bold hover:text-gray-300 transition duration-300 shadow-lg">
+            Urban Style
           </Link>
         </div>
 
@@ -52,24 +50,22 @@ const Header: React.FC<HeaderProps> = ({ cartCount }) => {
             </button>
             {dropdownOpen && (
               <div className="absolute right-0 mt-2 bg-white text-gray-800 rounded-md shadow-lg w-48">
-                <Link href="/profile">
-                  <a className="block px-4 py-2 hover:bg-gray-100 transition duration-300">Perfil</a>
+                <Link href="/profile" className="block px-4 py-2 hover:bg-gray-100 transition duration-300">
+                  Perfil
                 </Link>
-                <Link href="/orders">
-                  <a className="block px-4 py-2 hover:bg-gray-100 transition duration-300">Meus Pedidos</a>
+                <Link href="/orders" className="block px-4 py-2 hover:bg-gray-100 transition duration-300">
+                  Meus Pedidos
                 </Link>
-                <Link href="/logout">
-                  <a className="block px-4 py-2 hover:bg-gray-100 transition duration-300">Sair</a>
+                <Link href="/logout" className="block px-4 py-2 hover:bg-gray-100 transition duration-300">
+                  Sair
                 </Link>
               </div>
             )}
           </div>
 
           <div className="relative">
-            <Link href="/cart">
-              <a className="text-white hover:text-gray-300 transition duration-300 transform hover:scale-110">
-                <FaShoppingCart size={28} />
-              </a>
+            <Link href="/cart" className="text-white hover:text-gray-300 transition duration-300 transform hover:scale-110">
+              <FaShoppingCart size={28} />
             </Link>
             {cartCount > 0 && (
               <span className="absolute -top-2 -right-3 bg-red-500 text-white rounded-full px-2 py-1 text-xs">
